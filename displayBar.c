@@ -55,6 +55,7 @@ int initTFT()
 	return XST_SUCCESS;
 }
 
+//(x0,y0) is the bottom left corner of the bar
 void drawBar(int width, int length, int y0, int x0, int col)
 {
 	int i = 0;
