@@ -33,7 +33,7 @@
 /************************** Function Prototypes *****************************/
 
 int initTFT();
-void drawBar(int width, int length, int y0, int x0);
+void drawBar(int width, int length, int y0, int x0, int col);
 void drawHorLine(XTft *Tft, int y, int x1, int x2, int col);
 void clearScreen();
 void fillScreen();
