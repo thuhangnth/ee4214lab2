@@ -56,25 +56,28 @@ void moveBar()
 		//Decrement x coordinate
 		x=x-DIST;
 		if (x<0) x=0;
-		clearScreen();
-		drawBar(5,LENGTH,409,x,0x000000ff);//blue
-		//drawBar(5,DIST,409,x+LENGTH,0x00ffffff);//white
+		drawBar(5,LENGTH,409,x,0x000000ff);
+		drawBar(5,DIST,409,x+LENGTH,0x00ffffff);
 	}
 	else if (btn==RIGHT_BTN)
 	{
 		//Increment x coordinate
 		x=x+DIST;
 		if (x>639-LENGTH) x=639-LENGTH;
-		clearScreen();
-		drawBar(5,LENGTH,409,x,0x000000ff);//blue
-		//drawBar(5,DIST,409,x-DIST,0x00ffffff);//white
+		drawBar(5,LENGTH,409,x,0x000000ff);
+		drawBar(5,DIST,409,x-DIST,0x00ffffff);
 	}
+	/*else
+	{
+		drawBar(5,LENGTH,409,x,0x000000ff);
+	}*/
 }
 
 void* thread_func_1()
 {
 	while (1)
 	{
+		//clearScreen();
 		moveBar();
 		sleep(40);
 	}
